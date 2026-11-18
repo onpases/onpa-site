@@ -143,6 +143,8 @@ section.show { padding: 0; }
 .scrim-tb { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; background: linear-gradient(180deg, rgba(17,18,20,0.88) 0%, rgba(17,18,20,0.35) 34%, rgba(17,18,20,0.4) 52%, rgba(17,18,20,0.94) 100%); }
 .glass .card { background: rgba(27,28,31,0.82); }
 .refs-tight .ref { min-height: 120px; padding: 28px 32px; }
+.refs-tight .ref p { font-size: 34px; }
+.refs-tight .strip img { height: 150px; }
 .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
 .strip img { width: 538px; height: 220px; object-fit: cover; border-radius: 16px; }
 .slogan { font-family: 'Outfit', Arial, sans-serif; font-size: 56px; font-weight: 500; line-height: 1.2; color: var(--paper); text-align: center; }
@@ -445,12 +447,13 @@ body { background: #0b0c0e; overflow: hidden; }
 <div class="foot"><img class="flogo" src="../media/onpa-mark-dark.png" alt="ONPA"><p class="num"></p></div>
 
 </section>
-<section id="referanslar" class="light refs-tight">
+<section id="referanslar" class="light refs-tight" style="gap:40px">
 <div class="head">
 <p class="eyebrow rise" style="--i:0">Referanslar</p>
 <h2 class="rise" style="--i:1">Mikrofonu bize bırakanlar</h2>
 </div>
-<div class="rise" style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:24px; --i:2">
+<div class="rise" style="display:flex; flex-direction:column; gap:20px; --i:2">
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:24px">
 <div class="ref"><p>BMW</p></div>
 <div class="ref"><p>Coca-Cola CCI</p></div>
 <div class="ref"><p>British American Tobacco</p></div>
@@ -459,6 +462,8 @@ body { background: #0b0c0e; overflow: hidden; }
 <div class="ref"><p>Kosifler Oto</p></div>
 <div class="ref"><p>Tüyap</p></div>
 <div class="ref"><p>Samsun Büyükşehir Belediyesi</p></div>
+</div>
+<p class="lead">…ve sahnesini bize emanet eden daha nice marka, kurum ve organizasyon.</p>
 </div>
 <div class="strip fade" style="--i:3">
 <img src="../media/ref-bmw.jpg" alt="BMW lansmanı: mavi ışıkla aydınlatılmış sahne">
@@ -472,17 +477,19 @@ body { background: #0b0c0e; overflow: hidden; }
 <video class="fade" style="object-fit:cover; position:absolute; left:1280px; top:0; width:640px; height:1080px; object-fit:cover; --i:1" aria-label="BMW lansmanı: dairesel truss altında parlayan logo ve moving head huzmeleri" poster="../media/bmw-sahne-v.jpg" data-src="../media/bmw-sahne-v.mp4" muted loop playsinline preload="none"></video>
 <div class="head" style="max-width:1080px">
 <p class="eyebrow rise" style="--i:0">İletişim</p>
-<p class="statement rise" style="font-size:96px; --i:1">Arayın,<br>ses verelim.</p>
-<p class="lead rise" style="--i:2">Tarihi söyleyin, keşfe gelelim.</p>
+<p class="statement rise" style="font-size:84px; --i:1">Arayın,<br>ses verelim.</p>
+<p class="lead rise" style="--i:2">Tarihi söyleyin, keşfe gelelim. Samsun’dan Türkiye’nin her yerine.</p>
 </div>
-<div style="flex:1"></div>
-<div class="rise" style="display:grid; grid-template-columns:1fr 1fr; gap:24px 72px; max-width:1080px; --i:3">
-<div class="fitem"><p class="d">Telefon</p><p class="t">0542 523 32 74</p></div>
-<div class="fitem"><p class="d">E-posta</p><p class="t">bilgi@onpases.com</p></div>
-<div class="fitem"><p class="d">Instagram</p><p class="t">@onpases</p></div>
-<div class="fitem"><p class="d">Merkez</p><p class="t">Samsun’dan Türkiye’nin her yerine</p></div>
+<div style="flex:1; display:flex; align-items:center">
+<img class="fade" src="../media/onpa-mark-lg.png" alt="ONPA logosu" style="width:474px; height:200px; object-fit:contain; --i:2">
 </div>
-<div class="foot" style="width:1080px"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><p class="num"></p></div>
+<div class="rise" style="display:grid; grid-template-columns:1fr 1fr; gap:20px 72px; max-width:1080px; --i:3">
+<div class="fitem" style="padding-bottom:16px"><p class="d" style="font-size:24px">Hakan Paskap</p><p class="t" style="font-size:32px">0542 523 32 74</p></div>
+<div class="fitem" style="padding-bottom:16px"><p class="d" style="font-size:24px">Ercan Paskap</p><p class="t" style="font-size:32px">0542 770 77 74</p></div>
+<div class="fitem" style="padding-bottom:16px"><p class="d" style="font-size:24px">E-posta</p><p class="t" style="font-size:32px">bilgi@onpases.com</p></div>
+<div class="fitem" style="padding-bottom:16px"><p class="d" style="font-size:24px">Instagram</p><p class="t" style="font-size:32px">@onpases</p></div>
+</div>
+<div class="foot" style="width:1080px; justify-content:flex-end"><p class="num"></p></div>
 
 </section>
 </div>
