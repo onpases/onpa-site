@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Lansman, sempozyum, gala ve konserlerden kareler. Ses, ışık, LED ekran ve sahne.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ONPA Katalog">
+<meta property="og:description" content="Lansman, sempozyum, gala ve konserlerden kareler. Ses, ışık, LED ekran ve sahne.">
+<meta property="og:url" content="https://onpa.site/katalog/">
+<meta property="og:image" content="https://onpa.site/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../media/favicon.png">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>ONPA Katalog</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: a stack of A4 sheets on a dark desk; every size inside a sheet is in cqw so a sheet scales as one piece, like a PDF page. */
+:root {
+  color-scheme: dark;
+  --desk: #1C1D20;
+  --ink: #111214;
+  --ink-2: #1B1C1F;
+  --paper: #F2F0EB;
+  --paper-2: #E5E2DA;
+  --orange: #F29A1F;
+  --orange-deep: #A65A05;
+  --mute-d: #A9AAAE;
+  --mute-l: #55575C;
+  --line-d: #34353A;
+  --line-l: #CFCBC1;
+  --display: 'Outfit', 'Trebuchet MS', Arial, sans-serif;
+  --text: 'Inter', Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--desk);
+  color: var(--paper);
+  font-family: var(--text);
+  padding-block: 32px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.book { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+
+/* sheet */
+.sheet {
+  position: relative;
+  width: min(794px, 100%);
+  aspect-ratio: 210 / 297;
+  container-type: inline-size;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .5);
+}
+.sheet.light { background: var(--paper); color: #16171A; }
+.pg {
+  position: absolute; inset: 0;
+  padding: 7cqw 7cqw 9cqw;
+  display: flex; flex-direction: column; gap: 3cqw;
+}
+
+/* type */
+h1, h2, h3 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: 10.4cqw; line-height: .98; letter-spacing: -.03em; }
+h2 { font-size: 6.2cqw; line-height: 1.02; letter-spacing: -.02em; }
+h3 { font-size: 3.4cqw; line-height: 1.1; letter-spacing: -.01em; }
+p { margin: 0; }
+.eyebrow { font-size: 1.55cqw; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: var(--orange); }
+.light .eyebrow { color: var(--orange-deep); }
+.lead { font-size: 2.05cqw; line-height: 1.55; color: var(--mute-d); max-width: 66cqw; }
+.light .lead { color: var(--mute-l); }
+.head { display: flex; flex-direction: column; gap: 1.6cqw; }
+.acc { color: var(--orange); }
+.light .acc { color: var(--orange-deep); }
+
+/* footer */
+.foot {
+  position: absolute; left: 7cqw; right: 7cqw; bottom: 3.6cqw;
+  display: flex; justify-content: space-between;
+  font-size: 1.3cqw; letter-spacing: .12em; color: var(--mute-d);
+}
+.light .foot { color: var(--mute-l); }
+.foot b { color: var(--orange); font-weight: 600; letter-spacing: .04em; }
+.light .foot b { color: var(--orange-deep); }
+.foot { align-items: center; }
+.foot .fl { display: flex; }
+.flogo { display: block; height: 2.6cqw; width: auto; max-width: none; }
+.flogo.dk, .light .flogo { display: none; }
+.light .flogo.dk { display: block; }
+
+/* media */
+.m { position: relative; margin: 0; overflow: hidden; border-radius: 1cqw; background: #08090A; min-height: 0; }
+.m video, .m img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.m video { cursor: pointer; }
+.m .pp { display: none; }
+.m figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 7cqw 2cqw 1.8cqw;
+  background: linear-gradient(transparent, rgba(8, 9, 10, .82));
+  color: #F2F0EB; font-size: 1.4cqw; letter-spacing: .06em;
+  display: flex; flex-direction: column; gap: .5cqw;
+  pointer-events: none;
+}
+.m figcaption .ce { font-size: 1.15cqw; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--orange); }
+.m figcaption .ct { font-family: var(--display); font-size: 2.7cqw; font-weight: 600; line-height: 1.1; letter-spacing: -.01em; }
+.m figcaption .cl { font-size: 1.4cqw; line-height: 1.45; letter-spacing: 0; color: #D6D5D2; max-width: 60cqw; }
+.c3 .m figcaption { padding: 6cqw 1.6cqw 1.6cqw; }
+.c3 .m figcaption .ct { font-size: 2.3cqw; }
+.c3 .m figcaption .cl { font-size: 1.3cqw; }
+.m .tag {
+  position: absolute; top: 1.4cqw; left: 1.4cqw;
+  display: flex; align-items: center; gap: .8cqw;
+  padding: .55cqw 1.2cqw; border-radius: 99px;
+  background: rgba(8, 9, 10, .62); color: #F2F0EB;
+  font-size: 1.2cqw; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  pointer-events: none;
+}
+.m .tag::before { content: ""; width: 1cqw; height: 1cqw; border-radius: 50%; background: var(--orange); }
+.bleed { position: absolute; inset: 0; border-radius: 0; }
+.r169 { aspect-ratio: 16 / 9; }
+.r21 { aspect-ratio: 2 / 1; }
+.fill { flex: 1; }
+
+.row { display: grid; gap: 2cqw; }
+.row.c2 { grid-template-columns: 1fr 1fr; }
+.row.c3 { grid-template-columns: 1fr 1fr 1fr; }
+.col { display: flex; flex-direction: column; gap: 2cqw; min-height: 0; }
+
+/* cover */
+.cover .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(17,18,20,.92) 0%, rgba(17,18,20,.15) 34%, rgba(17,18,20,.2) 50%, rgba(17,18,20,.95) 84%); }
+.cover .pg { justify-content: space-between; padding-bottom: 7cqw; }
+.cover .logo { width: 48cqw; height: auto; }
+.cover .bottom { display: flex; flex-direction: column; gap: 2.4cqw; }
+.cover .lead { color: #D6D5D2; font-size: 2.3cqw; max-width: 72cqw; }
+.meta { display: flex; flex-wrap: wrap; gap: 1cqw 3.2cqw; font-size: 1.5cqw; letter-spacing: .18em; text-transform: uppercase; color: #D6D5D2; padding-top: 2.4cqw; border-top: .2cqw solid rgba(242,240,235,.25); }
+.meta span::before { content: ""; display: inline-block; width: .9cqw; height: .9cqw; border-radius: 50%; background: var(--orange); margin-right: 1.1cqw; vertical-align: .15em; }
+
+/* about */
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw; flex: 1; min-height: 0; }
+.about .txt { display: flex; flex-direction: column; gap: 3cqw; justify-content: space-between; }
+.stat { display: flex; flex-direction: column; gap: .4cqw; padding-top: 1.8cqw; border-top: .2cqw solid var(--line-l); }
+.stat .n { font-family: var(--display); font-weight: 600; font-size: 6.2cqw; line-height: 1; letter-spacing: -.02em; }
+.stat .l { font-size: 1.7cqw; color: var(--mute-l); }
+.stats4 { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2cqw 2cqw; }
+.stats4 .stat .n { font-size: 4.6cqw; white-space: nowrap; color: var(--orange-deep); }
+.stats4 .stat .l { font-size: 1.5cqw; }
+
+/* items */
+.items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2cqw; }
+.items.stack { grid-template-columns: 1fr; gap: 0; }
+.item { display: flex; flex-direction: column; gap: .6cqw; padding-block: 1.6cqw; border-top: .2cqw solid var(--line-d); }
+.light .item { border-top-color: var(--line-l); }
+.item .k { font-size: 1.35cqw; letter-spacing: .14em; text-transform: uppercase; color: var(--mute-d); }
+.light .item .k { color: var(--mute-l); }
+.item .v { font-family: var(--display); font-size: 2.3cqw; font-weight: 600; line-height: 1.2; }
+.block { display: flex; flex-direction: column; gap: .8cqw; }
+.block .ce { font-size: 1.35cqw; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--orange); }
+.light .block .ce { color: var(--orange-deep); }
+
+/* big number */
+.big { display: flex; flex-direction: column; align-items: flex-start; gap: 1.4cqw; }
+.big .n { font-family: var(--display); font-weight: 600; font-size: 14cqw; line-height: .9; letter-spacing: -.04em; color: var(--orange); }
+.light .big .n { color: var(--orange-deep); }
+.big .l { display: flex; flex-direction: column; gap: .6cqw; }
+.big .l b { font-family: var(--display); font-size: 3.2cqw; font-weight: 600; }
+.big .l span { font-size: 1.7cqw; letter-spacing: .18em; text-transform: uppercase; color: var(--mute-d); }
+.light .big .l span { color: var(--mute-l); }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw; align-items: end; }
+
+/* spec cards */
+.spec { display: flex; flex-direction: column; gap: 2cqw; min-height: 0; }
+.card { background: var(--ink-2); border-radius: 1cqw; padding: 2.2cqw; display: flex; flex-direction: column; gap: .6cqw; border-left: .5cqw solid var(--orange); }
+.light .card { background: var(--paper-2); border-left-color: var(--orange-deep); }
+.card .k { font-size: 1.35cqw; letter-spacing: .14em; text-transform: uppercase; color: var(--mute-d); }
+.light .card .k { color: var(--mute-l); }
+.card .v { font-family: var(--display); font-size: 2.6cqw; font-weight: 600; line-height: 1.15; }
+.card .n { font-family: var(--display); font-size: 5cqw; font-weight: 600; line-height: 1; color: var(--orange); }
+.light .card .n { color: var(--orange-deep); }
+
+/* numbers + services */
+.six { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2cqw; }
+.six div { display: flex; flex-direction: column; gap: .5cqw; padding-top: 1.4cqw; border-top: .2cqw solid var(--line-d); }
+.six .n { white-space: nowrap; font-family: var(--display); font-weight: 600; font-size: 5cqw; line-height: 1; letter-spacing: -.03em; color: var(--orange); }
+.six .l { font-size: 1.5cqw; line-height: 1.35; color: var(--mute-d); }
+.sheet-tbl { display: flex; flex-direction: column; }
+.sheet-tbl div { display: grid; grid-template-columns: 20cqw 1fr; gap: 2cqw; padding: 1.25cqw 0; border-top: .2cqw solid var(--line-d); font-size: 1.7cqw; line-height: 1.45; }
+.sheet-tbl div:last-child { border-bottom: .2cqw solid var(--line-d); }
+.sheet-tbl dt { font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 1.35cqw; color: var(--orange); padding-top: .25cqw; }
+.sheet-tbl dd { margin: 0; color: #D6D5D2; }
+dl { margin: 0; }
+
+/* process */
+.steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.4cqw 2cqw; }
+.step { display: flex; flex-direction: column; gap: .7cqw; padding-top: 1.4cqw; border-top: .2cqw solid var(--line-l); }
+.step .no { font-family: var(--display); font-size: 4cqw; font-weight: 600; line-height: 1; color: var(--orange-deep); }
+.step b { font-family: var(--display); font-size: 2.3cqw; font-weight: 600; }
+.step span { font-size: 1.5cqw; line-height: 1.45; color: var(--mute-l); }
+
+/* references */
+.refs { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4cqw; }
+.refs p { font-family: var(--display); font-size: 3.3cqw; font-weight: 500; line-height: 1.15; padding: 1.8cqw 0; border-top: .2cqw solid var(--line-d); }
+.light .refs p { border-top-color: var(--line-l); }
+
+/* contact */
+.contact .pg { justify-content: space-between; }
+.contact .logo { width: 44cqw; height: auto; }
+.contact h2 { font-size: 7.4cqw; max-width: 76cqw; }
+.lines { display: flex; flex-direction: column; }
+.lines div { display: flex; flex-direction: column; gap: .5cqw; padding: 2cqw 0; border-top: .2cqw solid var(--line-d); }
+.lines .k { font-size: 1.4cqw; letter-spacing: .18em; text-transform: uppercase; color: var(--mute-d); }
+.lines .v { font-family: var(--display); font-size: 4.4cqw; font-weight: 500; letter-spacing: -.01em; user-select: all; }
+.contact .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 1.6cqw; background: var(--orange); }
+
+@page { size: A4; margin: 0; }
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: none; padding: 0; }
+  .book { display: block; }
+  .sheet { width: 210mm; height: 297mm; aspect-ratio: auto; box-shadow: none; break-after: page; page-break-after: always; }
+  .sheet:last-child { break-after: auto; page-break-after: auto; }
+  .m video, .m .tag { display: none; }
+  .m .pp { display: block; }
+}
+</style>
+
+<main class="book">
+
+<!-- 1 · Kapak -->
+<section class="sheet cover" aria-label="Kapak">
+  <figure class="m bleed">
+    <video src="../media/konser-v.mp4" poster="../media/konser-v.jpg" muted loop playsinline preload="none"></video>
+    <img class="pp" src="../media/konser-v.jpg" alt="">
+  </figure>
+  <div class="shade"></div>
+  <div class="pg">
+    <img class="logo" src="../media/onpa-logo.png" alt="ONPA technical production co.">
+    <div class="bottom">
+      <p class="eyebrow">Katalog · 2026</p>
+      <h1>Sahne sizin, arkası bizde.</h1>
+      <div class="meta"><span>1995’ten beri ses veriyoruz</span><span>Samsun’dan Türkiye’nin her yerine</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · Lansman -->
+<section class="sheet" aria-label="Lansman">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Lansman</p>
+      <h2>Üç, iki, bir, örtü</h2>
+      <p class="lead">Yeni BMW iX3 açılışı. LED ekranlar ve zemindeki moving head sırası aynı ana ayarlı.</p>
+    </div>
+    <figure class="m r21">
+      <video src="../media/bmw-reveal-h.mp4" poster="../media/bmw-reveal-h.jpg" muted loop playsinline preload="none"></video>
+      <img class="pp" src="../media/bmw-reveal-h.jpg" alt=""><span class="tag">Video</span>
+    </figure>
+    <div class="row c3 fill">
+      <figure class="m">
+        <video src="../media/bmw-i7-v.mp4" poster="../media/bmw-i7-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/bmw-i7-v.jpg" alt=""><span class="tag">Video</span>
+        <figcaption><span class="ce">Lansman</span><b class="ct">Sis çekildi, i7 kaldı</b><span class="cl">BMW i7 lansmanı. Dairesel truss, mavi huzmeler ve sis tek bir araca bakıyor.</span></figcaption>
+      </figure>
+      <figure class="m">
+        <video src="../media/kosifler-v.mp4" poster="../media/kosifler-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/kosifler-v.jpg" alt=""><span class="tag">Video</span>
+        <figcaption><span class="ce">Lansman</span><b class="ct">Dün showroom, bu akşam sahne</b><span class="cl">Kosifler Oto Samsun lansmanı. Truss, ışık ve marka ekranı showroomun içine kuruldu.</span></figcaption>
+      </figure>
+      <figure class="m">
+        <video src="../media/bmw-ix3-v.mp4" poster="../media/bmw-ix3-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/bmw-ix3-v.jpg" alt=""><span class="tag">Video</span>
+        <figcaption><span class="ce">Lansman</span><b class="ct">Üç, iki, bir, örtü</b><span class="cl">Yeni BMW iX3 açılışı.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>02 / 14</span></div>
+</section>
+
+<!-- 3 · Hakkımızda -->
+<section class="sheet light" aria-label="Hakkımızda">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Hakkımızda</p>
+      <h2>1995’ten beri kablo sarıyoruz</h2>
+    </div>
+    <div class="about">
+      <div class="txt">
+        <p class="lead" style="font-size:2.15cqw">Otuz yılı aşkın süredir salonları, meydanları ve sahneleri etkinliğe hazırlıyoruz. Ses, ışık, LED ekran, sahne ve truss kendi depomuzdan çıkıyor; kurulumu ve operasyonu kendi ekibimiz yapıyor.</p>
+        <div class="block"><span class="ce">Envanter</span><h3>Hepsi bizim depodan</h3></div>
+        <div class="stats4">
+          <div class="stat"><span class="n">20 kabin</span><span class="l">JBL Vertec</span></div>
+          <div class="stat"><span class="n">16 kabin</span><span class="l">Audiofocus Ares 8</span></div>
+          <div class="stat"><span class="n">100+</span><span class="l">moving head</span></div>
+          <div class="stat"><span class="n">200 kVA</span><span class="l">mobil jeneratör</span></div>
+        </div>
+      </div>
+      <figure class="m">
+        <img src="../media/askon-kursu.jpg" alt="ASKON zirvesinde kürsü, LED ekran ve sahne">
+        <figcaption><span class="ce">Konferans sesi</span><b class="ct">Ses, deneme, bir, iki</b><span class="cl">Telsiz el, kürsü ve headset mikrofon. Konuşmacı hangisiyle rahatsa onunla.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>03 / 14</span></div>
+</section>
+
+<!-- 4 · Sempozyum -->
+<section class="sheet" aria-label="Sempozyum">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Kurumsal</p>
+      <h2>Fark etmediyseniz, oradaydık.</h2>
+      <p class="lead">İyi bir toplantıda kimse tekniği konuşmaz. Konuşmacı duyulur, sunum okunur, program saatinde akar.</p>
+    </div>
+    <div class="row c2 fill">
+      <figure class="m">
+        <video src="../media/sempozyum-salon-v.mp4" poster="../media/sempozyum-salon-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/sempozyum-salon-v.jpg" alt=""><span class="tag">Video</span>
+        <figcaption><span class="ce">Sempozyum · Sheraton Grand Samsun</span><b class="ct">Hekimlerden önce biz geldik</b><span class="cl">5. Karadeniz Romatoloji ve Ağrı Sempozyumu. Salon, ilk katılımcıdan önce hazırdı.</span></figcaption>
+      </figure>
+      <figure class="m">
+        <video src="../media/sempozyum-v.mp4" poster="../media/sempozyum-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/sempozyum-v.jpg" alt=""><span class="tag">Video</span>
+        <figcaption><span class="ce">Sempozyum</span><b class="ct">Kürsüde hekim, ekranda slayt</b><span class="cl">8–10 Mayıs, üç gün süren oturumlar. Kürsü mikrofonu ve LED ekran konuşmacıdan konuşmacıya aynı netlikte.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>04 / 14</span></div>
+</section>
+
+<!-- 5 · Zirve -->
+<section class="sheet light" aria-label="Zirve">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Zirve</p>
+      <h2>Salon dolu, son sıra dahil</h2>
+      <p class="lead">ASKON zirvesi. Sahne boyu LED ekran, kürsü ve dolu salona yeten ses.</p>
+    </div>
+    <figure class="m r169">
+      <video src="../media/askon-h.mp4" poster="../media/askon-h.jpg" muted loop playsinline preload="none"></video>
+      <img class="pp" src="../media/askon-h.jpg" alt=""><span class="tag">Video</span>
+    </figure>
+    <div class="row c2 fill">
+      <figure class="m"><img src="../media/askon-sahne.jpg" alt="ASKON zirvesi sahnesi ve LED ekran"></figure>
+      <figure class="m"><img src="../media/askon-salon.jpg" alt="ASKON zirvesi salon kurulumu"></figure>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>05 / 14</span></div>
+</section>
+
+<!-- 6 · Protokol toplantısı -->
+<section class="sheet" aria-label="Protokol toplantısı">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Protokol toplantısı</p>
+      <h2>Protokolde tekrar çekim yok</h2>
+      <p class="lead">Kalabalık bir protokol toplantısı. Salon boyu LED ekran, ilk seferde doğru ses.</p>
+    </div>
+    <figure class="m r169"><img src="../media/bolge-led.jpg" alt="Protokol toplantısında salon boyu LED ekran ve kürsü"></figure>
+    <div class="row c2 fill">
+      <figure class="m"><img src="../media/bolge-dikey.jpg" alt="Protokol toplantısı salonu, arka sıralardan sahneye bakış"></figure>
+      <figure class="m"><img src="../media/bolge-salon.jpg" alt="Protokol toplantısı salonu ve LED ekran"></figure>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>06 / 14</span></div>
+</section>
+
+<!-- 7 · Davet -->
+<section class="sheet light" aria-label="Davet">
+  <div class="pg">
+    <div class="row c2 fill" style="gap:4cqw">
+      <figure class="m">
+        <video src="../media/iftar-v.mp4" poster="../media/iftar-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/iftar-v.jpg" alt=""><span class="tag">Video</span>
+      </figure>
+      <div class="col" style="justify-content:space-between">
+        <div class="head">
+          <p class="eyebrow">Davet</p>
+          <h2>Son masa da davetli</h2>
+          <p class="lead">Büyük bir salon daveti. Line array, LED ekran ve kürsü misafirlerden önce kuruldu.</p>
+        </div>
+        <div class="items stack">
+          <div class="item"><span class="k">Ses</span><span class="v">Line array</span></div>
+          <div class="item"><span class="k">Görüntü</span><span class="v">LED ekran</span></div>
+          <div class="item"><span class="k">Sahne</span><span class="v">Kürsü</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>07 / 14</span></div>
+</section>
+
+<!-- 8 · Gala -->
+<section class="sheet" aria-label="Gala">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Gala</p>
+      <h2>Tavan yoksa truss var</h2>
+      <p class="lead">Açık avluda kurumsal gala. Truss sahne kuruldu, sponsorlar LED ekranlarda yerini aldı.</p>
+    </div>
+    <div class="row c2 fill">
+      <figure class="m">
+        <video src="../media/gala-v.mp4" poster="../media/gala-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/gala-v.jpg" alt=""><span class="tag">Video</span>
+      </figure>
+      <figure class="m">
+        <video src="../media/gala-led-v.mp4" poster="../media/gala-led-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/gala-led-v.jpg" alt=""><span class="tag">Video</span>
+        <figcaption><span class="ce">LED ekran</span><b class="ct">Göremedim diyen kalmasın</b><span class="cl">100 m² LED ekran. Yan ekranlarla sahne her masadan görünür.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>08 / 14</span></div>
+</section>
+
+<!-- 9 · Işık -->
+<section class="sheet light" aria-label="Işık">
+  <div class="pg">
+    <div class="split">
+      <div class="big"><span class="n">100+</span><span class="l"><b>moving head</b><span>beam · spot · wash</span></span></div>
+      <div class="head">
+        <p class="eyebrow">Işık</p>
+        <h3>Avizeler bu gece izinli</h3>
+        <p class="lead" style="max-width:none; font-size:1.9cqw">100’den fazla moving head. Beam, spot ve wash ile balo salonu konser sahnesine döner.</p>
+      </div>
+    </div>
+    <div class="row c2 fill">
+      <figure class="m">
+        <video src="../media/balo-v.mp4" poster="../media/balo-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/balo-v.jpg" alt=""><span class="tag">Video</span>
+      </figure>
+      <figure class="m">
+        <video src="../media/bmw-sahne-v.mp4" poster="../media/bmw-sahne-v.jpg" muted loop playsinline preload="none"></video>
+        <img class="pp" src="../media/bmw-sahne-v.jpg" alt=""><span class="tag">Video</span>
+        <figcaption><span class="ce">Lansman</span><span class="cl">BMW lansmanı</span></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>09 / 14</span></div>
+</section>
+
+<!-- 10 · Festival ve konser -->
+<section class="sheet" aria-label="Festival ve konser">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Festival</p>
+      <h2>Aynı sahnede dünyanın adımları</h2>
+    </div>
+    <figure class="m r21">
+      <video src="../media/festival-h.mp4" poster="../media/festival-h.jpg" muted loop playsinline preload="none"></video>
+      <img class="pp" src="../media/festival-h.jpg" alt=""><span class="tag">Video</span>
+      <figcaption><span class="cl">56. Uluslararası Samsun Halk Oyunları Festivali. Truss çatı ve dev LED ekran.</span></figcaption>
+    </figure>
+    <div class="row c2 fill">
+      <figure class="m">
+        <img src="../media/festival-sahne.jpg" alt="19 Mayıs konserinde açık hava sahnesi ve seyirci">
+        <figcaption><span class="ce">Konser</span><b class="ct">Binlerce kişi, tek nakarat</b><span class="cl">19 Mayıs konseri. Vertec line array ve LED yan ekranlarla binlerce kişilik açık hava sahnesi.</span></figcaption>
+      </figure>
+      <div class="spec">
+        <div class="card"><span class="k">Line array</span><span class="v">JBL Vertec</span><span class="n">20 kabin</span></div>
+        <div class="card"><span class="k">Line array</span><span class="v">Audiofocus Ares 8</span><span class="n">16 kabin</span></div>
+        <figure class="m fill"><img src="../media/festival-gunduz.jpg" alt="19 Mayıs konseri sahnesi, LED ekran ve ses sistemi"></figure>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>10 / 14</span></div>
+</section>
+
+<!-- 11 · Süreç -->
+<section class="sheet light" aria-label="Süreç">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Süreç</p>
+      <h2>İlk biz geliriz, son biz çıkarız</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="no">1</span><b>Keşif</b><span>Salonu yerinde görür, programı ve konuşmacı sayısını öğreniriz.</span></div>
+      <div class="step"><span class="no">2</span><b>Proje</b><span>Ekipman listesi, yerleşim planı ve gerekirse 2D/3D çizim.</span></div>
+      <div class="step"><span class="no">3</span><b>Kurulum</b><span>Etkinlikten önce, kendi ekibimizle.</span></div>
+      <div class="step"><span class="no">4</span><b>Prova</b><span>Mikrofon, sunum ve geçişler konuşmacıyla birlikte denenir.</span></div>
+      <div class="step"><span class="no">5</span><b>Etkinlik</b><span>Operatörlerimiz program bitene kadar salonda.</span></div>
+      <div class="step"><span class="no">6</span><b>Söküm</b><span>Salon, aldığımız gibi teslim edilir.</span></div>
+    </div>
+    <figure class="m fill">
+      <video src="../media/bmw-yakin-v.mp4" poster="../media/bmw-yakin-v.jpg" muted loop playsinline preload="none"></video>
+      <img class="pp" src="../media/bmw-yakin-v.jpg" alt=""><span class="tag">Video</span>
+      <figcaption><span class="cl">BMW i7 lansmanı</span></figcaption>
+    </figure>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>11 / 14</span></div>
+</section>
+
+<!-- 12 · Rakamlar ve hizmetler -->
+<section class="sheet" aria-label="Rakamlar ve hizmetler">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Rakamlar</p>
+      <h2>Sayıyla söyleyelim</h2>
+    </div>
+    <div class="six">
+      <div><span class="n">100+</span><span class="l">etkinlik her yıl</span></div>
+      <div><span class="n">30+</span><span class="l">yıllık tecrübe</span></div>
+      <div><span class="n">100 m²</span><span class="l">LED ekran</span></div>
+      <div><span class="n">100+</span><span class="l">moving head</span></div>
+    </div>
+    <div class="block"><span class="ce">Hizmetler</span><h3>Fişten ilk alkışa</h3></div>
+    <dl class="sheet-tbl">
+      <div><dt>Ses</dt><dd>JBL Vertec ve Audiofocus Ares 8 line array. Konferans için telsiz el, kürsü ve headset mikrofon.</dd></div>
+      <div><dt>Işık</dt><dd>100’den fazla beam, spot ve wash moving head. Konuşmacı ışığından konser şovuna.</dd></div>
+      <div><dt>LED ekran</dt><dd>100 m² modüler LED. Sahne arkası, yan ekran, sponsor yüzeyi.</dd></div>
+      <div><dt>Sahne ve truss</dt><dd>Modüler sahne, kürsü platformu, truss çatı ve portal.</dd></div>
+      <div><dt>Enerji</dt><dd>200 kVA mobil jeneratörle şebekeden bağımsız kurulum.</dd></div>
+    </dl>
+    <figure class="m fill"><img src="../media/festival-kalabalik.jpg" alt="19 Mayıs konserinde sahne ve kalabalık"></figure>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>12 / 14</span></div>
+</section>
+
+<!-- 13 · Referanslar -->
+<section class="sheet light" aria-label="Referanslar">
+  <div class="pg">
+    <div class="head">
+      <p class="eyebrow">Referanslar</p>
+      <h2>Mikrofonu bize bırakanlar</h2>
+    </div>
+    <div class="refs">
+      <p>BMW</p>
+      <p>Coca-Cola CCI</p>
+      <p>British American Tobacco</p>
+      <p>ASKON</p>
+      <p>Sheraton Otel</p>
+      <p>Kosifler Oto</p>
+      <p>Tüyap</p>
+      <p>Samsun Büyükşehir Belediyesi</p>
+    </div>
+    <figure class="m fill">
+      <video src="../media/bmw-salon-h.mp4" poster="../media/bmw-salon-h.jpg" muted loop playsinline preload="none"></video>
+      <img class="pp" src="../media/bmw-salon-h.jpg" alt=""><span class="tag">Video</span>
+      <figcaption><span class="cl">BMW lansmanı</span></figcaption>
+    </figure>
+  </div>
+  <div class="foot"><span class="fl"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><img class="flogo dk" src="../media/onpa-mark-dark.png" alt="ONPA"></span><span>13 / 14</span></div>
+</section>
+
+<!-- 14 · İletişim -->
+<section class="sheet contact" aria-label="İletişim">
+  <div class="bar"></div>
+  <div class="pg">
+    <img class="logo" src="../media/onpa-logo.png" alt="ONPA technical production co.">
+    <div class="head">
+      <p class="eyebrow">İletişim</p>
+      <h2>Arayın, ses verelim.</h2>
+      <p class="lead">Tarihi söyleyin, keşfe gelelim.</p>
+    </div>
+    <div class="lines">
+      <div><span class="k">Telefon</span><span class="v">0542 523 32 74</span></div>
+      <div><span class="k">E-posta</span><span class="v">bilgi@onpases.com</span></div>
+      <div><span class="k">Instagram</span><span class="v acc">@onpases</span></div>
+    </div>
+    <div class="meta"><span>1995’ten beri ses veriyoruz</span><span>Samsun’dan Türkiye’nin her yerine</span></div>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function () {
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  var reduce = false;
+  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+  vids.forEach(function (v) {
+    v.muted = true;
+    v.addEventListener('click', function () {
+      if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); }
+    });
+  });
+  if (reduce || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else { v.pause(); }
+    });
+  }, { threshold: 0.3 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+
+</body>
+</html>
