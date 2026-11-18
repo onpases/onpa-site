@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Ses, ışık, LED ekran, sahne ve truss. 1995’ten beri Samsun’dan Türkiye’nin her yerine.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ONPA · Sahne sizin, arkası bizde">
+<meta property="og:description" content="Ses, ışık, LED ekran, sahne ve truss. 1995’ten beri Samsun’dan Türkiye’nin her yerine.">
+<meta property="og:url" content="https://onpa.site/">
+<meta property="og:image" content="https://onpa.site/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="media/favicon.png">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>ONPA · Sahne sizin, arkası bizde</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: full-height vertical feed, one 9:16 stage per screen, snap scrolling; blurred copy of each shot fills the sides on wide screens. Single dark look by design. */
+:root {
+  --ink: #0E0F11;
+  --ink-2: #17181B;
+  --paper: #F4F2ED;
+  --mute: #B9B9BE;
+  --orange: #F29A1F;
+  --line: rgba(244, 242, 237, 0.28);
+  --display: 'Outfit', 'Segoe UI', Arial, sans-serif;
+  --text: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --stage-w: min(100vw, calc(100dvh * 9 / 16));
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body { margin: 0; background: var(--ink); color: var(--paper); font-family: var(--text); overflow: hidden; }
+
+.feed {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+.feed::-webkit-scrollbar { display: none; }
+
+.reel {
+  position: relative;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--ink);
+}
+.reel > .bg {
+  position: absolute; inset: -60px;
+  width: calc(100% + 120px); height: calc(100% + 120px); max-width: none;
+  object-fit: cover;
+  filter: blur(40px) brightness(0.35) saturate(1.2);
+}
+.stage {
+  position: relative;
+  width: var(--stage-w);
+  height: 100%;
+  overflow: hidden;
+  background: var(--ink-2);
+  container-type: inline-size;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
+}
+.stage > video, .stage > img.media {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; max-width: none;
+  object-fit: cover;
+}
+.stage.dim > video, .stage.dim > img.media { filter: brightness(0.32) saturate(0.9); }
+.shade {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(14,15,17,0.55) 0%, rgba(14,15,17,0) 18%),
+    linear-gradient(to top, rgba(14,15,17,0.92) 0%, rgba(14,15,17,0.55) 26%, rgba(14,15,17,0) 48%);
+}
+
+/* caption block */
+.cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 0 7cqw calc(9cqw + env(safe-area-inset-bottom, 0px));
+  display: flex; flex-direction: column; gap: 2.4cqw;
+}
+.chip {
+  align-self: flex-start;
+  font: 600 3.1cqw/1 var(--text);
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink); background: var(--orange);
+  padding: 1.6cqw 2.6cqw; border-radius: 99px;
+}
+.cap h2 {
+  margin: 0;
+  font: 600 8.6cqw/1.04 var(--display);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.cap p { margin: 0; font: 400 4.1cqw/1.42 var(--text); color: var(--mute); max-width: 34ch; }
+.cap p b { color: var(--paper); font-weight: 600; }
+
+/* intro */
+.intro { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6cqw; padding: 0 8cqw; text-align: center; }
+.intro img { width: 78cqw; height: auto; }
+.intro .tag { font: 500 5.4cqw/1.25 var(--display); text-wrap: balance; margin: 0; }
+.intro .meta { font: 500 3.4cqw/1.4 var(--text); color: var(--mute); letter-spacing: 0.08em; text-transform: uppercase; margin: 0; }
+.hint { position: absolute; left: 0; right: 0; bottom: calc(7cqw + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; align-items: center; gap: 1.5cqw; font: 500 3.2cqw/1 var(--text); color: var(--mute); letter-spacing: 0.1em; text-transform: uppercase; }
+.hint svg { width: 6cqw; height: 6cqw; animation: nudge 1.6s ease-in-out infinite; }
+@keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(1.6cqw); } }
+
+/* stats */
+.board { position: absolute; inset: 0; padding: calc(16cqw + env(safe-area-inset-top, 0px)) 7cqw 9cqw; display: flex; flex-direction: column; gap: 5cqw; }
+.board h2 { margin: 0; font: 600 8.6cqw/1.04 var(--display); }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 6cqw 5cqw; }
+.stat { display: flex; flex-direction: column; gap: 1.2cqw; border-top: 2px solid var(--orange); padding-top: 2.6cqw; }
+.stat .n { font: 600 11cqw/1 var(--display); font-variant-numeric: tabular-nums; }
+.stat .n small { font-size: 0.5em; font-weight: 500; margin-left: 0.15em; }
+.stat .l { font: 400 3.6cqw/1.35 var(--text); color: var(--mute); }
+.gear { display: flex; flex-direction: column; gap: 2cqw; margin-top: auto; }
+.gear p { margin: 0; font: 400 3.7cqw/1.4 var(--text); color: var(--mute); }
+.gear p b { color: var(--paper); font-weight: 600; }
+
+/* references */
+.refs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.refs li { font: 600 7cqw/1.1 var(--display); padding: 2.4cqw 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 3cqw; }
+.refs li span { font: 500 3cqw/1 var(--text); color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+
+/* contact */
+.contact { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3cqw; }
+.contact li { display: flex; align-items: center; justify-content: space-between; gap: 3cqw; padding: 3.6cqw 4cqw; background: rgba(244, 242, 237, 0.08); border: 1px solid var(--line); border-radius: 3cqw; }
+.contact .k { font: 500 3cqw/1 var(--text); color: var(--mute); letter-spacing: 0.1em; text-transform: uppercase; }
+.contact .v { font: 600 5.6cqw/1.2 var(--display); user-select: all; overflow-wrap: anywhere; }
+.contact button { flex: none; font: 600 3.2cqw/1 var(--text); color: var(--ink); background: var(--orange); border: 0; border-radius: 99px; padding: 2.4cqw 3.6cqw; cursor: pointer; }
+.contact button:focus-visible, .navbtn:focus-visible { outline: 3px solid var(--paper); outline-offset: 3px; }
+
+/* HUD: fixed over the stage */
+.hud {
+  position: fixed; top: 0; left: 50%; transform: translateX(-50%);
+  width: var(--stage-w);
+  padding: calc(var(--stage-w) * 0.035 + env(safe-area-inset-top, 0px)) calc(var(--stage-w) * 0.05) 0;
+  container-type: inline-size; box-sizing: border-box;
+  display: flex; flex-direction: column; gap: 3cqw;
+  pointer-events: none; z-index: 5;
+}
+.bars { display: flex; gap: 1cqw; }
+.bars i { flex: 1; height: 0.8cqw; min-height: 3px; border-radius: 9px; background: rgba(244, 242, 237, 0.28); overflow: hidden; }
+.bars i b { display: block; height: 100%; width: 0; background: var(--paper); }
+.bars i.done b { width: 100%; }
+.top { display: flex; justify-content: space-between; align-items: center; }
+.brand { display: block; height: 6.2cqw; width: auto; max-width: none; }
+.count { font: 500 3.2cqw/1 var(--text); color: var(--mute); font-variant-numeric: tabular-nums; }
+
+/* desktop nav */
+.nav { position: fixed; right: max(24px, env(safe-area-inset-right, 0px)); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 12px; z-index: 6; }
+.navbtn { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: rgba(23, 24, 27, 0.7); color: var(--paper); display: grid; place-items: center; cursor: pointer; }
+.navbtn svg { width: 22px; height: 22px; }
+.navbtn:disabled { opacity: 0.35; cursor: default; }
+@media (max-width: 760px), (pointer: coarse) { .nav { display: none; } }
+
+.paused::after {
+  content: ""; position: absolute; left: 50%; top: 45%; width: 16cqw; height: 16cqw; transform: translate(-50%, -50%);
+  border-radius: 50%; background: rgba(14, 15, 17, 0.55) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23F4F2ED'/%3E%3C/svg%3E") center / 50% no-repeat;
+}
+@media (prefers-reduced-motion: reduce) { .hint svg { animation: none; } .feed { scroll-behavior: auto; } }
+</style>
+
+<div class="hud" aria-hidden="true">
+  <div class="bars" id="bars"></div>
+  <div class="top"><img class="brand" src="media/onpa-mark.png" alt="ONPA"><span class="count" id="count">01 / 18</span></div>
+</div>
+
+<div class="nav">
+  <button class="navbtn" id="prev" type="button" aria-label="Önceki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg></button>
+  <button class="navbtn" id="next" type="button" aria-label="Sonraki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+</div>
+
+<main class="feed" id="feed">
+
+  <section class="reel" aria-label="Giriş">
+    <img class="bg" src="media/bmw-sahne-v.jpg" alt="">
+    <div class="stage dim">
+      <video muted loop playsinline preload="auto" poster="media/bmw-sahne-v.jpg" data-src="media/bmw-sahne-v.mp4"></video>
+      <div class="intro">
+        <img src="media/onpa-logo.png" alt="ONPA technical production co.">
+        <p class="tag">Sahne sizin, arkası bizde.</p>
+        <p class="meta">1995’ten beri ses veriyoruz · Samsun’dan Türkiye’nin her yerine</p>
+      </div>
+      <div class="hint"><span>Kaydır</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="BMW i7 lansmanı">
+    <img class="bg" src="media/bmw-i7-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/bmw-i7-v.jpg" data-src="media/bmw-i7-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Lansman</span><h2>Sis çekildi, i7 kaldı</h2><p>BMW i7 lansmanı. Dairesel truss, mavi huzmeler ve sis tek bir araca bakıyor.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Kosifler Oto lansmanı">
+    <img class="bg" src="media/kosifler-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/kosifler-v.jpg" data-src="media/kosifler-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Lansman</span><h2>Dün showroom, bu akşam sahne</h2><p>Kosifler Oto Samsun lansmanı. Truss, ışık ve marka ekranı showroomun içine kuruldu.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="BMW iX3 açılışı">
+    <img class="bg" src="media/bmw-ix3-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/bmw-ix3-v.jpg" data-src="media/bmw-ix3-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Lansman</span><h2>Üç, iki, bir, örtü</h2><p>Yeni BMW iX3 açılışı. LED ekranlar ve zemindeki moving head sırası aynı ana ayarlı.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Sempozyum salonu">
+    <img class="bg" src="media/sempozyum-salon-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/sempozyum-salon-v.jpg" data-src="media/sempozyum-salon-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Sempozyum · Sheraton Grand Samsun</span><h2>Hekimlerden önce biz geldik</h2><p>5. Karadeniz Romatoloji ve Ağrı Sempozyumu. Salon, ilk katılımcıdan önce hazırdı.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Sempozyum oturumu">
+    <img class="bg" src="media/sempozyum-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/sempozyum-v.jpg" data-src="media/sempozyum-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Sempozyum</span><h2>Kürsüde hekim, ekranda slayt</h2><p>8–10 Mayıs, üç gün süren oturumlar. Kürsü mikrofonu ve LED ekran konuşmacıdan konuşmacıya aynı netlikte.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="ASKON zirvesi">
+    <img class="bg" src="media/askon-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/askon-v.jpg" data-src="media/askon-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Zirve</span><h2>Salon dolu, son sıra dahil</h2><p>ASKON zirvesi. Sahne boyu LED ekran, kürsü ve dolu salona yeten ses.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Konferans sesi">
+    <img class="bg" src="media/askon-kursu.jpg" alt="">
+    <div class="stage">
+      <img class="media" src="media/askon-kursu.jpg" alt="ASKON zirvesinde kürsü ve arkasında LED ekran">
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Konferans sesi</span><h2>Ses, deneme, bir, iki</h2><p><b>Telsiz el, kürsü ve headset mikrofon.</b> Konuşmacı hangisiyle rahatsa onunla.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Protokol toplantısı">
+    <img class="bg" src="media/bolge-dikey.jpg" alt="">
+    <div class="stage">
+      <img class="media" src="media/bolge-dikey.jpg" alt="Avizeli otel salonunda protokol toplantısı, sahne boyunca uzanan LED ekran">
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Protokol toplantısı</span><h2>Protokolde tekrar çekim yok</h2><p>Kalabalık bir protokol toplantısı. Salon boyu LED ekran, ilk seferde doğru ses.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Salon daveti">
+    <img class="bg" src="media/iftar-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/iftar-v.jpg" data-src="media/iftar-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Davet</span><h2>Son masa da davetli</h2><p>Büyük bir salon daveti. Line array, LED ekran ve kürsü misafirlerden önce kuruldu.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Kurumsal gala">
+    <img class="bg" src="media/gala-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/gala-v.jpg" data-src="media/gala-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Gala</span><h2>Tavan yoksa truss var</h2><p>Açık avluda kurumsal gala. Truss sahne kuruldu, sponsorlar LED ekranlarda yerini aldı.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="LED ekranlar">
+    <img class="bg" src="media/gala-led-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/gala-led-v.jpg" data-src="media/gala-led-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">LED ekran</span><h2>Göremedim diyen kalmasın</h2><p><b>100 m² LED ekran.</b> Yan ekranlarla sahne her masadan görünür.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Işık">
+    <img class="bg" src="media/balo-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/balo-v.jpg" data-src="media/balo-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Işık</span><h2>Avizeler bu gece izinli</h2><p><b>100’den fazla moving head.</b> Beam, spot ve wash ile balo salonu konser sahnesine döner.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="19 Mayıs konseri">
+    <img class="bg" src="media/konser-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/konser-v.jpg" data-src="media/konser-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Konser</span><h2>Binlerce kişi, tek nakarat</h2><p>19 Mayıs konseri. Vertec line array ve LED yan ekranlarla binlerce kişilik açık hava sahnesi.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Halk Oyunları Festivali">
+    <img class="bg" src="media/festival-v.jpg" alt="">
+    <div class="stage">
+      <video muted loop playsinline preload="none" poster="media/festival-v.jpg" data-src="media/festival-v.mp4"></video>
+      <div class="shade"></div>
+      <div class="cap"><span class="chip">Festival</span><h2>Aynı sahnede dünyanın adımları</h2><p>56. Uluslararası Samsun Halk Oyunları Festivali. Truss çatı ve dev LED ekran.</p></div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Envanter">
+    <img class="bg" src="media/festival-gunduz.jpg" alt="">
+    <div class="stage dim">
+      <img class="media" src="media/festival-gunduz.jpg" alt="">
+      <div class="board">
+        <h2>Hepsi bizim depodan</h2>
+        <div class="stats">
+          <div class="stat"><span class="n">100<small>+</small></span><span class="l">etkinlik her yıl</span></div>
+          <div class="stat"><span class="n">30<small>+</small></span><span class="l">yıllık tecrübe</span></div>
+          <div class="stat"><span class="n">100<small>m²</small></span><span class="l">LED ekran</span></div>
+          <div class="stat"><span class="n">100<small>+</small></span><span class="l">moving head</span></div>
+          <div class="stat"><span class="n">36</span><span class="l">line array kabin</span></div>
+          <div class="stat"><span class="n">200<small>kVA</small></span><span class="l">mobil jeneratör</span></div>
+        </div>
+        <div class="gear">
+          <p><b>JBL Vertec</b> · 20 kabin</p>
+          <p><b>Audiofocus Ares 8</b> · 16 kabin</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Referanslar">
+    <img class="bg" src="media/bmw-reveal-v.jpg" alt="">
+    <div class="stage dim">
+      <video muted loop playsinline preload="none" poster="media/bmw-reveal-v.jpg" data-src="media/bmw-reveal-v.mp4"></video>
+      <div class="board">
+        <h2>Mikrofonu bize bırakanlar</h2>
+        <ul class="refs">
+          <li>BMW <span>Lansman</span></li>
+          <li>Coca-Cola CCI <span>Kurumsal</span></li>
+          <li>British American Tobacco <span>Kurumsal</span></li>
+          <li>ASKON <span>Zirve</span></li>
+          <li>Sheraton Otel <span>Otel</span></li>
+          <li>Kosifler Oto <span>Lansman</span></li>
+          <li>Tüyap <span>Fuar</span></li>
+          <li>Samsun Büyükşehir Belediyesi <span>Kamu</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="İletişim">
+    <img class="bg" src="media/bmw-yakin-v.jpg" alt="">
+    <div class="stage dim">
+      <video muted loop playsinline preload="none" poster="media/bmw-yakin-v.jpg" data-src="media/bmw-yakin-v.mp4"></video>
+      <div class="board">
+        <img src="media/onpa-logo.png" alt="ONPA technical production co." style="width:62cqw;height:auto">
+        <h2>Arayın, ses verelim.</h2>
+        <p style="margin:0;font:400 4.1cqw/1.4 var(--text);color:var(--mute)">Tarihi söyleyin, keşfe gelelim.</p>
+        <ul class="contact">
+          <li><div><div class="k">Telefon</div><div class="v">0542 523 32 74</div></div><button type="button" data-copy="0542 523 32 74">Kopyala</button></li>
+          <li><div><div class="k">E-posta</div><div class="v">bilgi@onpases.com</div></div><button type="button" data-copy="bilgi@onpases.com">Kopyala</button></li>
+          <li><div><div class="k">Instagram</div><div class="v">@onpases</div></div><button type="button" data-copy="@onpases">Kopyala</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  var feed = document.getElementById('feed');
+  var reels = Array.prototype.slice.call(document.querySelectorAll('.reel'));
+  var barsEl = document.getElementById('bars');
+  var countEl = document.getElementById('count');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = 0;
+  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+
+  reels.forEach(function () { var i = document.createElement('i'); i.appendChild(document.createElement('b')); barsEl.appendChild(i); });
+  var bars = barsEl.children;
+
+  function videoOf(i) { return reels[i] && reels[i].querySelector('video'); }
+  function ensureSrc(v) { if (v && !v.src && v.dataset.src) { v.src = v.dataset.src; v.preload = 'auto'; } }
+
+  function setActive(i) {
+    current = i;
+    countEl.textContent = pad(i + 1) + ' / ' + pad(reels.length);
+    for (var k = 0; k < bars.length; k++) {
+      bars[k].classList.toggle('done', k < i || (k === i && !videoOf(k)));
+      if (k >= i) bars[k].firstChild.style.width = '';
+    }
+    reels.forEach(function (r, k) {
+      var v = videoOf(k);
+      if (!v) return;
+      if (k === i) {
+        ensureSrc(v);
+        if (!reduce) { var p = v.play(); if (p && p.catch) p.catch(function () { r.querySelector('.stage').classList.add('paused'); }); }
+        else r.querySelector('.stage').classList.add('paused');
+      } else { v.pause(); }
+    });
+    ensureSrc(videoOf(i + 1));
+    document.getElementById('prev').disabled = i === 0;
+    document.getElementById('next').disabled = i === reels.length - 1;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting && e.intersectionRatio > 0.6) setActive(reels.indexOf(e.target)); });
+  }, { root: feed, threshold: [0.6] });
+  reels.forEach(function (r) { io.observe(r); });
+
+  // live progress for the playing clip
+  reels.forEach(function (r, k) {
+    var v = videoOf(k);
+    if (!v) return;
+    v.addEventListener('playing', function () { r.querySelector('.stage').classList.remove('paused'); });
+    v.addEventListener('timeupdate', function () {
+      if (k !== current || !v.duration) return;
+      bars[k].firstChild.style.width = (v.currentTime / v.duration * 100).toFixed(1) + '%';
+    });
+    r.querySelector('.stage').addEventListener('click', function (ev) {
+      if (ev.target.closest('button')) return;
+      var st = r.querySelector('.stage');
+      ensureSrc(v);
+      if (v.paused) { v.play(); st.classList.remove('paused'); } else { v.pause(); st.classList.add('paused'); }
+    });
+  });
+
+  function go(d) {
+    var t = Math.max(0, Math.min(reels.length - 1, current + d));
+    reels[t].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  }
+  document.getElementById('prev').addEventListener('click', function () { go(-1); });
+  document.getElementById('next').addEventListener('click', function () { go(1); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(1); }
+    if (e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); go(-1); }
+  });
+
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var txt = b.getAttribute('data-copy');
+      var done = function () { b.textContent = 'Kopyalandı'; setTimeout(function () { b.textContent = 'Kopyala'; }, 1600); };
+      var fallback = function () {
+        var v = b.parentElement.querySelector('.v');
+        var s = window.getSelection(), rg = document.createRange();
+        rg.selectNodeContents(v); s.removeAllRanges(); s.addRange(rg);
+        b.textContent = 'Seçildi';
+      };
+      try { navigator.clipboard.writeText(txt).then(done, fallback); } catch (err) { fallback(); }
+    });
+  });
+
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) setActive(current); });
+  setActive(0);
+})();
+</script>
+
+</body>
+</html>
