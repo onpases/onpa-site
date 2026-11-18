@@ -142,9 +142,9 @@ section.show { padding: 0; }
 .block .d { font-size: 26px; line-height: 1.45; color: var(--mute-dark); }
 .scrim-tb { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; background: linear-gradient(180deg, rgba(17,18,20,0.88) 0%, rgba(17,18,20,0.35) 34%, rgba(17,18,20,0.4) 52%, rgba(17,18,20,0.94) 100%); }
 .glass .card { background: rgba(27,28,31,0.82); }
-.refs-tight .ref { min-height: 120px; padding: 28px 32px; }
-.refs-tight .ref p { font-size: 34px; }
-.refs-tight .strip img { height: 150px; }
+.refs-tight .ref { min-height: 84px; padding: 18px 28px; }
+.refs-tight .ref p { font-size: 32px; }
+.refs-tight .strip img { height: 140px; }
 .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
 .strip img { width: 538px; height: 220px; object-fit: cover; border-radius: 16px; }
 .slogan { font-family: 'Outfit', Arial, sans-serif; font-size: 56px; font-weight: 500; line-height: 1.2; color: var(--paper); text-align: center; }
@@ -358,6 +358,22 @@ body { background: #0b0c0e; overflow: hidden; }
 <div class="foot"><img class="flogo" src="../media/onpa-mark-dark.png" alt="ONPA"><p class="num"></p></div>
 
 </section>
+<section id="kursu" class="light">
+<div class="mediarow" style="grid-template-columns:1fr 528px">
+<div class="col">
+<div class="head">
+<p class="eyebrow rise" style="--i:0">LED kürsü</p>
+<h2 class="rise" style="--i:1">Kürsü de konuşur</h2>
+</div>
+<p class="lead rise" style="--i:2">Önde seyirciye dönük dikey ekran: etkinlik logosu, konuşmacı adı ya da sponsor görseli. Üstte konuşmacıya dönük dokunmatik ekran.</p>
+<img class="clip fade" src="../media/urun-kursu-ust.jpg" alt="Konuşmacının gözünden kürsünün üst dokunmatik ekranı: sunum önizlemesi, sıradaki slayt ve süre sayacı" style="width:1064px; height:420px; --i:3">
+<p class="rise" style="font-size:26px; color:#55575C; --i:4">Konuşmacının gördüğü: sunum, sıradaki slayt ve süre.</p>
+</div>
+<img class="clip fade" src="../media/urun-kursu.jpg" alt="ONPA'nın dijital kürsüsü seyirci tarafından: ön dikey ekranda ONPA logosu" style="width:528px; height:792px; --i:2">
+</div>
+<div class="foot"><img class="flogo" src="../media/onpa-mark-dark.png" alt="ONPA"><p class="num"></p></div>
+
+</section>
 <section id="goruntu">
 <div class="mediarow" style="grid-template-columns:1fr 464px">
 <div class="col">
@@ -370,6 +386,22 @@ body { background: #0b0c0e; overflow: hidden; }
 <p class="lead rise" style="--i:3">Yan ekranlarla sahne her masadan görünür. Sahne arkası, yan ekran ve sponsor yüzeyi.</p>
 </div>
 <video class="clip fade" style="object-fit:cover; width:464px; height:792px; --i:2" aria-label="Açık avluda gala: truss üzerinde LED ekranlar ve masalar" poster="../media/gala-led-v.jpg" data-src="../media/gala-led-v.mp4" muted loop playsinline preload="none"></video>
+</div>
+<div class="foot"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><p class="num"></p></div>
+
+</section>
+<section id="ledposter" class="alt">
+<div class="mediarow" style="grid-template-columns:432px 1fr">
+<img class="clip fade" src="../media/urun-poster-tek.jpg" alt="Otel fuayesinde ONPA LED poster ekranı, ekranda Hoş geldiniz yazısı" style="width:432px; height:792px; --i:1">
+<div class="col">
+<div class="head">
+<p class="eyebrow rise" style="--i:0">LED poster</p>
+<h2 class="rise" style="--i:1">Kapıda ilk o karşılar</h2>
+</div>
+<p class="rise" style="--i:2">Tekerlekli, ince çerçeveli dikey LED ekran. Karşılama, yönlendirme ve sponsor görselleri için.</p>
+<img class="clip fade" src="../media/urun-poster-4lu.jpg" alt="Yan yana birleşmiş dört LED poster, ekranlara yayılan ONPA logosu" style="width:1160px; height:400px; --i:3">
+<p class="rise" style="font-size:28px; --i:4"><b>Dördü bir arada, tek ekran.</b> Elimizdeki dört LED poster yan yana birleşip tek bir geniş ekrana dönüşür.</p>
+</div>
 </div>
 <div class="foot"><img class="flogo" src="../media/onpa-mark.png" alt="ONPA"><p class="num"></p></div>
 
@@ -447,13 +479,13 @@ body { background: #0b0c0e; overflow: hidden; }
 <div class="foot"><img class="flogo" src="../media/onpa-mark-dark.png" alt="ONPA"><p class="num"></p></div>
 
 </section>
-<section id="referanslar" class="light refs-tight" style="gap:40px">
+<section id="referanslar" class="light refs-tight" style="gap:28px">
 <div class="head">
 <p class="eyebrow rise" style="--i:0">Referanslar</p>
 <h2 class="rise" style="--i:1">Mikrofonu bize bırakanlar</h2>
 </div>
 <div class="rise" style="display:flex; flex-direction:column; gap:20px; --i:2">
-<div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:24px">
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px">
 <div class="ref"><p>BMW</p></div>
 <div class="ref"><p>Coca-Cola CCI</p></div>
 <div class="ref"><p>British American Tobacco</p></div>
@@ -461,6 +493,7 @@ body { background: #0b0c0e; overflow: hidden; }
 <div class="ref"><p>Sheraton Otel</p></div>
 <div class="ref"><p>Kosifler Oto</p></div>
 <div class="ref"><p>Tüyap</p></div>
+<div class="ref"><p>Esfa Fuarcılık</p></div>
 <div class="ref"><p>Samsun Büyükşehir Belediyesi</p></div>
 </div>
 <p class="lead">…ve sahnesini bize emanet eden daha nice marka, kurum ve organizasyon.</p>
